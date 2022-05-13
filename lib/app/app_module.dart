@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:yahoo_finance/app/features/home/home_module.dart';
 import 'package:yahoo_finance/app/features/login/login_module.dart';
 
 import 'app_routes.dart';
@@ -17,6 +18,10 @@ class AppModule extends Module {
         ModuleRoute(
           AppRoutes.login,
           module: LoginModule(),
+        ),
+        ModuleRoute(
+          AppRoutes.home,
+          module: HomehModule(),
         ),
       ];
 }

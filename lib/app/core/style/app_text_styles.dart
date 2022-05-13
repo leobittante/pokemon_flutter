@@ -12,6 +12,13 @@ class AppTextStyles {
     //fontWeight: FontWeight.w700,
   );
 
+  static const TextStyle welcomeHomeTitle = TextStyle(
+    color: AppColors.white,
+    fontSize: 26,
+    fontFamily: _fontPoppins,
+    fontWeight: FontWeight.w700,
+  );
+
   static const TextStyle title = TextStyle(
     color: AppColors.black54,
     fontSize: 23,

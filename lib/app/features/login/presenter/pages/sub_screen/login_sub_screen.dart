@@ -33,6 +33,11 @@ class _LoginSubScreenState extends State<LoginSubScreen> {
     _setupControllers();
   }
 
+  awaitLoading() async {
+    await Future.delayed(const Duration(seconds: 2));
+    loading = false;
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LoginStorageCubit, LoginStorageState>(
@@ -42,8 +47,9 @@ class _LoginSubScreenState extends State<LoginSubScreen> {
             loading = true;
           }
           if (state is LoginStorageSuccess) {
-            loading = false;
-            Modular.to.pushReplacementNamed(assertRoute(AppRoutes.home));
+            awaitLoading();
+            Modular.to.pushReplacementNamed(assertRoute(AppRoutes.home),
+                arguments: {'name': state.response.name});
           }
           if (state is LoginStorageError) {
             loading = false;
