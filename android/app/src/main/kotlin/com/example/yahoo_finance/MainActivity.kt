@@ -1,4 +1,4 @@
-package com.example.yahoo_finance
+package com.example.pokemon_dex
 
 import io.flutter.embedding.android.FlutterActivity
 

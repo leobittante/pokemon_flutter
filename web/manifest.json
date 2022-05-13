@@ -1,6 +1,6 @@
 {
-    "name": "yahoo_finance",
-    "short_name": "yahoo_finance",
+    "name": "pokemon_dex",
+    "short_name": "pokemon_dex",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

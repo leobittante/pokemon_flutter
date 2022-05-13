@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yahoo_finance/app/core/style/app_text_styles.dart';
+import 'package:pokemon_dex/app/core/style/app_text_styles.dart';
 
 class TextErrorFormFieldWidget extends StatelessWidget {
   final String text;

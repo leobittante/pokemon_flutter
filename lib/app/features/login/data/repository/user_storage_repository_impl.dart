@@ -1,9 +1,9 @@
-import 'package:yahoo_finance/app/features/login/data/datasources/user_storage_datasource.dart';
-import 'package:yahoo_finance/app/features/login/presenter/params/user_storage_params.dart';
+import 'package:pokemon_dex/app/features/login/data/datasources/user_storage_datasource.dart';
+import 'package:pokemon_dex/app/features/login/presenter/params/user_storage_params.dart';
 
-import 'package:yahoo_finance/app/features/login/data/models/response_login_model.dart';
+import 'package:pokemon_dex/app/features/login/data/models/response_login_model.dart';
 
-import 'package:yahoo_finance/app/core/errors/failures.dart';
+import 'package:pokemon_dex/app/core/errors/failures.dart';
 
 import 'package:dartz/dartz.dart';
 

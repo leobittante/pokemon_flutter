@@ -1,4 +1,4 @@
-# yahoo_finance
+# pokemon_dex
 
 A new Flutter project.
 

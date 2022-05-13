@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:yahoo_finance/app/core/errors/failures.dart';
-import 'package:yahoo_finance/app/features/login/domain/entity/response_login_entity.dart';
-import 'package:yahoo_finance/app/features/login/domain/usecases/login_storage_usecase.dart';
+import 'package:pokemon_dex/app/core/errors/failures.dart';
+import 'package:pokemon_dex/app/features/login/domain/entity/response_login_entity.dart';
+import 'package:pokemon_dex/app/features/login/domain/usecases/login_storage_usecase.dart';
 
 import '../../../../core/http_client/api_messages.dart';
 import '../params/user_storage_params.dart';

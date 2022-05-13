@@ -4,7 +4,6 @@ class ApiConsts {
   static const connectionDataCheckerAddress = 'www.google.com';
 
   //ENDPOINTS
-
-  //BASE_URL
-  static const BASE_URL = "https://gd4.autodoc.com.br/api/construtora/";
+  static const String ALL_POKEMONS =
+      'https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json';
 }

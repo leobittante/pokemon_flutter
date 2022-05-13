@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yahoo_finance/app/features/home/presenter/home_page.dart';
+import 'package:pokemon_dex/app/features/home/presenter/home_page.dart';
 
-class HomehModule extends Module {
+class HomeModule extends Module {
   @override
   List<Bind<Object>> get binds => [];
 

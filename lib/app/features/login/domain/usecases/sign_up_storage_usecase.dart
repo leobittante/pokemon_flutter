@@ -1,6 +1,6 @@
-import 'package:yahoo_finance/app/core/errors/failures.dart';
+import 'package:pokemon_dex/app/core/errors/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:yahoo_finance/app/core/usecase/usecase.dart';
+import 'package:pokemon_dex/app/core/usecase/usecase.dart';
 
 import '../../presenter/params/user_storage_params.dart';
 import '../repository/user_storage_repository.dart';

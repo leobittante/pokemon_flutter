@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:yahoo_finance/app/features/login/domain/entity/response_login_entity.dart';
+import 'package:pokemon_dex/app/features/login/domain/entity/response_login_entity.dart';
 
 import '../../../../core/errors/failures.dart';
 import '../../../../core/usecase/usecase.dart';

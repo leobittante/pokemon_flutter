@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yahoo_finance/app/core/assets/images/app_images.dart';
-import 'package:yahoo_finance/app/core/style/app_colors.dart';
+import 'package:pokemon_dex/app/core/assets/images/app_images.dart';
+import 'package:pokemon_dex/app/core/style/app_colors.dart';
 
 import '../../../../app_routes.dart';
 import '../../../../core/utils/assert_route.dart';
@@ -22,11 +22,9 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   //TIMER PARA O SPLASH SCREEN
-  _timerSplash() {
-    Timer.periodic(
-        const Duration(seconds: 4),
-        (timer) =>
-            Modular.to.pushReplacementNamed(assertRoute(AppRoutes.login)));
+  _timerSplash() async {
+    await Future.delayed(const Duration(seconds: 4));
+    Modular.to.pushReplacementNamed(assertRoute(AppRoutes.login));
   }
 
   @override
@@ -37,6 +35,8 @@ class _SplashPageState extends State<SplashPage> {
             child: Image.asset(
           AppImages.logo,
           filterQuality: FilterQuality.high,
+          fit: BoxFit.scaleDown,
+          scale: .9,
         )));
   }
 }

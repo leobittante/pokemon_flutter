@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yahoo_finance/app/core/dialogs/app_dialogs.dart';
-import 'package:yahoo_finance/app/features/login/presenter/cubit/sign_up_storage_cubit.dart';
-import 'package:yahoo_finance/app/features/login/presenter/params/user_storage_params.dart';
+import 'package:pokemon_dex/app/core/dialogs/app_dialogs.dart';
+import 'package:pokemon_dex/app/features/login/presenter/cubit/sign_up_storage_cubit.dart';
+import 'package:pokemon_dex/app/features/login/presenter/params/user_storage_params.dart';
 
 import '../../../../../core/style/app_text_styles.dart';
 import '../../../../../core/utils/validators.dart';

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(yahoo_finance LANGUAGES CXX)
+project(pokemon_dex LANGUAGES CXX)
 
-set(BINARY_NAME "yahoo_finance")
+set(BINARY_NAME "pokemon_dex")
 
 cmake_policy(SET CMP0063 NEW)
 

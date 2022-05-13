@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yahoo_finance/app/features/login/presenter/cubit/login_storage_cubit.dart';
+import 'package:pokemon_dex/app/features/login/presenter/cubit/login_storage_cubit.dart';
 
 import '../../../../../app_routes.dart';
 import '../../../../../core/dialogs/app_dialogs.dart';
@@ -33,11 +33,6 @@ class _LoginSubScreenState extends State<LoginSubScreen> {
     _setupControllers();
   }
 
-  awaitLoading() async {
-    await Future.delayed(const Duration(seconds: 2));
-    loading = false;
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LoginStorageCubit, LoginStorageState>(
@@ -47,9 +42,11 @@ class _LoginSubScreenState extends State<LoginSubScreen> {
             loading = true;
           }
           if (state is LoginStorageSuccess) {
-            awaitLoading();
-            Modular.to.pushReplacementNamed(assertRoute(AppRoutes.home),
-                arguments: {'name': state.response.name});
+            loading = false;
+            if (state.response.name.isNotEmpty) {
+              Modular.to.pushReplacementNamed(assertRoute(AppRoutes.home),
+                  arguments: {'name': state.response.name});
+            }
           }
           if (state is LoginStorageError) {
             loading = false;
@@ -68,7 +65,7 @@ class _LoginSubScreenState extends State<LoginSubScreen> {
                   ),
                 ),
                 const Text(
-                  'Yahoo Finance',
+                  'Pokémon Dex',
                   style: AppTextStyles.titleCards,
                 ),
                 Padding(

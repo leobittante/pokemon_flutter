@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yahoo_finance/app/core/style/app_colors.dart';
-import 'package:yahoo_finance/app/core/style/app_text_styles.dart';
-import 'package:yahoo_finance/app/features/login/presenter/pages/style/widgets_style.dart';
+import 'package:pokemon_dex/app/core/style/app_colors.dart';
+import 'package:pokemon_dex/app/core/style/app_text_styles.dart';
+import 'package:pokemon_dex/app/features/login/presenter/pages/style/widgets_style.dart';
 
 class ButtonLoginCustomWidget extends StatelessWidget {
   final Size size;

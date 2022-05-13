@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yahoo_finance/app/features/login/domain/usecases/login_storage_usecase.dart';
-import 'package:yahoo_finance/app/features/login/presenter/cubit/login_storage_cubit.dart';
-import 'package:yahoo_finance/app/features/login/presenter/cubit/sign_up_storage_cubit.dart';
+import 'package:pokemon_dex/app/features/login/domain/usecases/login_storage_usecase.dart';
+import 'package:pokemon_dex/app/features/login/presenter/cubit/login_storage_cubit.dart';
+import 'package:pokemon_dex/app/features/login/presenter/cubit/sign_up_storage_cubit.dart';
 
 import '../../core/storage/storage_shared_preferences.dart';
 import 'data/datasources/user_storage_datasource.dart';
