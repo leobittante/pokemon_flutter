@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yahoo_finance/app/core/style/app_colors.dart';
 import 'package:yahoo_finance/app/core/style/app_text_styles.dart';
 import 'package:yahoo_finance/app/features/login/presenter/pages/style/widgets_style.dart';
 
@@ -6,11 +7,13 @@ class ButtonLoginCustomWidget extends StatelessWidget {
   final Size size;
   final double paddingHorizontal;
   final String textButton;
+  final bool loading;
   final VoidCallback? onTap;
   const ButtonLoginCustomWidget(
       {Key? key,
       required this.size,
       required this.textButton,
+      required this.loading,
       this.onTap,
       this.paddingHorizontal = 0})
       : super(key: key);
@@ -28,9 +31,21 @@ class ButtonLoginCustomWidget extends StatelessWidget {
               width: size.width,
               decoration: WidgetStyle.boxDecorationButtonLogin,
               child: Center(
-                child: Text(
-                  textButton,
-                  style: AppTextStyles.button,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (!loading) ...[
+                      Text(
+                        textButton,
+                        style: AppTextStyles.button,
+                      ),
+                    ] else ...const [
+                      CircularProgressIndicator(
+                        color: AppColors.white,
+                        strokeWidth: 2,
+                      )
+                    ]
+                  ],
                 ),
               ),
             )),

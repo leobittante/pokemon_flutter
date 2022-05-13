@@ -40,12 +40,6 @@ dependencies:
   # being able to compare objects in Dart
   equatable: ^2.0.3
 
-  # being able use SVG to show images
-  flutter_svg: ^1.0.3
-
-  # handling of loading images from the internet
-  cached_network_image: ^3.2.0
-
   # visual effect on card loading
   shimmer: ^2.0.0
 

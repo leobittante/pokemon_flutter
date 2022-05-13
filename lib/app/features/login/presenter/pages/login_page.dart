@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:yahoo_finance/app/core/widgets/exchange_animation_widget.dart';
+import 'package:yahoo_finance/app/features/login/presenter/pages/sub_screen/login_sub_screen.dart';
+import 'package:yahoo_finance/app/features/login/presenter/pages/sub_screen/sign_up_sub_screen.dart';
 import 'package:yahoo_finance/app/features/login/presenter/pages/widgets/background_with_logo_widget.dart';
 import 'package:yahoo_finance/app/features/login/presenter/pages/style/widgets_style.dart';
-import 'package:yahoo_finance/app/features/login/presenter/pages/widgets/sub_screen/login_sub_screen.dart';
-import 'package:yahoo_finance/app/features/login/presenter/pages/widgets/sub_screen/sign_up_sub_screen.dart';
 import '../../../../core/style/app_colors.dart';
 import '../../../../core/style/app_text_styles.dart';
 

@@ -10,10 +10,12 @@ class TextFieldCustomWidget extends StatefulWidget {
   final double paddingHorizontal;
   final bool password;
   final int lenghtText;
+  final FormFieldValidator<String>? validator;
   const TextFieldCustomWidget({
     Key? key,
     required this.controller,
     required this.textInputType,
+    required this.validator,
     required this.labelText,
     this.paddingHorizontal = 0,
     required this.password,
@@ -31,31 +33,38 @@ class _TextFieldCustomWidgetState extends State<TextFieldCustomWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: widget.paddingHorizontal),
-      child: TextFormField(
-        controller: widget.controller,
-        keyboardType: widget.textInputType,
-        obscureText: widget.password ? _obscureText : false,
-        maxLines: 1,
-        inputFormatters: [
-          LengthLimitingTextInputFormatter(widget.lenghtText),
+      child: Column(
+        children: [
+          TextFormField(
+            controller: widget.controller,
+            keyboardType: widget.textInputType,
+            obscureText: widget.password ? _obscureText : false,
+            maxLines: 1,
+            validator: widget.validator,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(widget.lenghtText),
+            ],
+            style: const TextStyle(color: AppColors.black, fontSize: 14),
+            decoration: InputDecoration(
+              suffixIcon: widget.password
+                  ? GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      },
+                      child: Icon(!_obscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                    )
+                  : null,
+              alignLabelWithHint: true,
+              labelText: widget.labelText,
+              labelStyle:
+                  const TextStyle(color: AppColors.black54, fontSize: 16),
+            ),
+          ),
         ],
-        style: const TextStyle(color: AppColors.black, fontSize: 14),
-        decoration: InputDecoration(
-          suffixIcon: widget.password
-              ? GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _obscureText = !_obscureText;
-                    });
-                  },
-                  child: Icon(
-                      !_obscureText ? Icons.visibility : Icons.visibility_off),
-                )
-              : null,
-          alignLabelWithHint: true,
-          labelText: widget.labelText,
-          labelStyle: const TextStyle(color: AppColors.black54, fontSize: 16),
-        ),
       ),
     );
   }

@@ -4,4 +4,8 @@ class InvalidLoginException implements Exception {}
 
 class NetworkInfoException implements Exception {}
 
-class UnauthorizedException implements Exception {}
+class KeyNotFoundException implements Exception {}
+
+class StorageException implements Exception {}
+
+class ClearStorageException implements Exception {}

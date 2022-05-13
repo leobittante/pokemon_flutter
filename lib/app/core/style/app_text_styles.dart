@@ -37,4 +37,11 @@ class AppTextStyles {
     fontFamily: _fontPoppins,
     fontWeight: FontWeight.w700,
   );
+
+  static const TextStyle errorFormField = TextStyle(
+    color: AppColors.redAccent,
+    fontSize: 12,
+    fontFamily: _fontPoppins,
+    fontWeight: FontWeight.w500,
+  );
 }
