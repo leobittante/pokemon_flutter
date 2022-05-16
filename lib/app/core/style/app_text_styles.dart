@@ -5,6 +5,13 @@ import 'app_colors.dart';
 class AppTextStyles {
   static const String _fontPoppins = 'Poppins';
 
+  static const TextStyle pokemonCard = TextStyle(
+    color: AppColors.white,
+    fontSize: 20,
+    fontFamily: _fontPoppins,
+    fontWeight: FontWeight.w600,
+  );
+
   static const TextStyle button = TextStyle(
     color: AppColors.white,
     fontSize: 20,
@@ -14,7 +21,7 @@ class AppTextStyles {
 
   static const TextStyle welcomeHomeTitle = TextStyle(
     color: AppColors.white,
-    fontSize: 26,
+    fontSize: 22,
     fontFamily: _fontPoppins,
     fontWeight: FontWeight.w700,
   );

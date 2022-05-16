@@ -1,31 +1,29 @@
+import 'package:pokemon_dex/app/features/home/data/models/pokemon/evolution_model.dart';
 import 'package:pokemon_dex/app/features/home/domain/entities/pokemon/pokemon_entity.dart';
-
-import 'next_evolution_model.dart';
-import 'prev_evolution_model.dart';
 
 class PokemonModel extends PokemonEntity {
   final int idModel;
-  final String numModel;
-  final String nameModel;
-  final String imgModel;
-  final List<String> typeModel;
-  final String heightModel;
-  final String weightModel;
-  final String candyModel;
-  final String eggModel;
-  final List<NextEvolutionModel>? nextEvolutionModel;
-  final List<PrevEvolutionModel>? prevEvolutionModel;
+  final String? numModel;
+  final String? nameModel;
+  final String? imgModel;
+  final List<String>? typeModel;
+  final String? heightModel;
+  final String? weightModel;
+  final String? candyModel;
+  final String? eggModel;
+  final List<EvolutionModel>? nextEvolutionModel;
+  final List<EvolutionModel>? prevEvolutionModel;
 
   const PokemonModel(
       {required this.idModel,
-      required this.numModel,
-      required this.nameModel,
-      required this.imgModel,
-      required this.typeModel,
-      required this.heightModel,
-      required this.weightModel,
-      required this.candyModel,
-      required this.eggModel,
+      this.numModel,
+      this.nameModel,
+      this.imgModel,
+      this.typeModel,
+      this.heightModel,
+      this.weightModel,
+      this.candyModel,
+      this.eggModel,
       this.nextEvolutionModel,
       this.prevEvolutionModel})
       : super(
@@ -42,8 +40,19 @@ class PokemonModel extends PokemonEntity {
             prevEvolution: prevEvolutionModel);
 
   factory PokemonModel.fromJson(Map<String, dynamic> json) {
-    List<NextEvolutionModel> listNextEvolution = [];
-    List<PrevEvolutionModel> listPrevEvolution = [];
+    List<EvolutionModel> listNextEvolution = [];
+    if (json['next_evolution'] != null) {
+      json['next_evolution'].forEach((v) {
+        listNextEvolution.add(EvolutionModel.fromJson(v));
+      });
+    }
+
+    List<EvolutionModel> listPrevEvolution = [];
+    if (json['prev_evolution'] != null) {
+      json['prev_evolution'].forEach((v) {
+        listPrevEvolution.add(EvolutionModel.fromJson(v));
+      });
+    }
 
     return PokemonModel(
         idModel: json['id'],
@@ -55,11 +64,7 @@ class PokemonModel extends PokemonEntity {
         weightModel: json['weight'],
         candyModel: json['candy'],
         eggModel: json['egg'],
-        nextEvolutionModel: json['next_evolution'].forEach((v) {
-          listNextEvolution.add(NextEvolutionModel.fromJson(v));
-        }),
-        prevEvolutionModel: json['prev_evolution'].forEach((v) {
-          listPrevEvolution.add(PrevEvolutionModel.fromJson(v));
-        }));
+        nextEvolutionModel: listNextEvolution,
+        prevEvolutionModel: listPrevEvolution);
   }
 }

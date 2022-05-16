@@ -1,31 +1,30 @@
 import 'package:equatable/equatable.dart';
 
-import 'next_evolution_entity.dart';
-import 'prev_evolution_entity.dart';
+import 'evolution_entity.dart';
 
 class PokemonEntity extends Equatable {
   final int id;
-  final String num;
-  final String name;
-  final String img;
-  final List<String> type;
-  final String height;
-  final String weight;
-  final String candy;
-  final String egg;
-  final List<NextEvolutionEntity>? nextEvolution;
-  final List<PrevEvolutionEntity>? prevEvolution;
+  final String? num;
+  final String? name;
+  final String? img;
+  final List<String>? type;
+  final String? height;
+  final String? weight;
+  final String? candy;
+  final String? egg;
+  final List<EvolutionEntity>? nextEvolution;
+  final List<EvolutionEntity>? prevEvolution;
 
   const PokemonEntity(
       {required this.id,
-      required this.num,
-      required this.name,
-      required this.img,
-      required this.type,
-      required this.height,
-      required this.weight,
-      required this.candy,
-      required this.egg,
+      this.num,
+      this.name,
+      this.img,
+      this.type,
+      this.height,
+      this.weight,
+      this.candy,
+      this.egg,
       this.nextEvolution,
       this.prevEvolution});
 

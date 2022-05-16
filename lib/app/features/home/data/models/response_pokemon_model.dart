@@ -10,9 +10,9 @@ class ResponsePokemonModel extends ResponsePokemonEntity {
 
   factory ResponsePokemonModel.fromJson(Map<String, dynamic> json) {
     List<PokemonModel> listPokemon = [];
-    return ResponsePokemonModel(
-        pokemonModel: json['pokemon'].forEach((v) {
+    json['pokemon'].forEach((v) {
       listPokemon.add(PokemonModel.fromJson(v));
-    }));
+    });
+    return ResponsePokemonModel(pokemonModel: listPokemon);
   }
 }

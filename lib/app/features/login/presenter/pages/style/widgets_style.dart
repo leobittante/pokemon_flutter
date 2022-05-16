@@ -20,4 +20,13 @@ class WidgetStyle {
           color: Colors.black54, blurRadius: 5.0, offset: Offset(0.0, 0.75))
     ],
   );
+
+  static const BoxDecoration boxDecorationButtonReload = BoxDecoration(
+    color: AppColors.redAccent,
+    shape: BoxShape.circle,
+    boxShadow: <BoxShadow>[
+      BoxShadow(
+          color: Colors.black54, blurRadius: 5.0, offset: Offset(0.0, 0.75))
+    ],
+  );
 }
